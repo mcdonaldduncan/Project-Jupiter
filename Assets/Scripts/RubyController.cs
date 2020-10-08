@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Threading;
 using UnityEngine;
 
 public class RubyController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Vector2 position = transform.position;
-        position.x = position.x + 0.1f;
-        transform.position = position;
+        //I tried adding modifiers here but it would give me errors that I do not understand
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        float characterSpeed = 3.0f;
+
+        Vector2 rubyPosition = transform.position;
+        rubyPosition.x = rubyPosition.x + characterSpeed * horizontal * Time.deltaTime;
+        rubyPosition.y = rubyPosition.y + characterSpeed * vertical * Time.deltaTime;
+        transform.position = rubyPosition;
     }
 }
