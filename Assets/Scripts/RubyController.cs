@@ -6,17 +6,59 @@ using UnityEngine;
 
 public class RubyController : MonoBehaviour
 {
-    // Update is called once per frame
-    private void Update()
-    {
-        //I tried adding modifiers here but it would give me errors that I do not understand
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        float characterSpeed = 3.0f;
+    public float speed = 3.0f;
+    public int maxHealth = 5;
+    public float timeInvincible = 2.0f;
+    public int health { get { return currentHealth; } }
+    int currentHealth;
+    bool isInvincible;
+    float invincibleTimer;
+    Rigidbody2D rigidbody2d;
+    float horizontal;
+    float vertical;
+    
 
-        Vector2 rubyPosition = transform.position;
-        rubyPosition.x = rubyPosition.x + characterSpeed * horizontal * Time.deltaTime;
-        rubyPosition.y = rubyPosition.y + characterSpeed * vertical * Time.deltaTime;
-        transform.position = rubyPosition;
+    void Start()
+    {
+        currentHealth = maxHealth;
+        
+        rigidbody2d = GetComponent<Rigidbody2D>();
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+
+        if (isInvincible)
+        {
+            invincibleTimer -= Time.deltaTime;
+            if (invincibleTimer < 0)
+                isInvincible = false;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        Vector2 position = rigidbody2d.position;
+        position.x = position.x + speed * horizontal * Time.deltaTime;
+        position.y = position.y + speed * vertical * Time.deltaTime;
+
+        rigidbody2d.MovePosition(position);
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        if (amount < 0)
+        {
+            if (isInvincible)
+                return;
+
+            isInvincible = true;
+            invincibleTimer = timeInvincible;
+        }
+
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
     }
 }
