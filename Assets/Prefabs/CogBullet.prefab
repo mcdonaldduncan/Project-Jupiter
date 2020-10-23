@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2701315306184420696
+--- !u!1 &1189483776128862894
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8689215805141362283}
-  - component: {fileID: 65560083325947812}
-  - component: {fileID: 3177258137267114726}
-  - component: {fileID: 6988918188172146692}
-  - component: {fileID: 7452769192146136624}
-  m_Layer: 0
-  m_Name: GirthBot
+  - component: {fileID: 3080488691812504223}
+  - component: {fileID: 9016289472643427249}
+  - component: {fileID: 7145624420964875805}
+  - component: {fileID: 4824628852005941613}
+  - component: {fileID: -7623013906400647953}
+  m_Layer: 9
+  m_Name: CogBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8689215805141362283
+--- !u!4 &3080488691812504223
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2701315306184420696}
+  m_GameObject: {fileID: 1189483776128862894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.382, y: 3.2195046, z: 0}
-  m_LocalScale: {x: 0.7075821, y: 0.48826882, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &65560083325947812
+--- !u!212 &9016289472643427249
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2701315306184420696}
+  m_GameObject: {fileID: 1189483776128862894}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,51 +74,51 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53f6739ea7583e045814dac6f0213a65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3bae526786f11046bdd2a781392a458, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.75666666, y: 0.32333332}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3177258137267114726
+--- !u!61 &7145624420964875805
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2701315306184420696}
+  m_GameObject: {fileID: 1189483776128862894}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05347061, y: 0.8656024}
+  m_Offset: {x: 0, y: 0.008437455}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75666666, y: 0.32333332}
+    newSize: {x: 0.75666666, y: 0.32333332}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7419987, y: 1.6242616}
+  m_Size: {x: 0.61859965, y: 0.22055012}
   m_EdgeRadius: 0
---- !u!50 &6988918188172146692
+--- !u!50 &4824628852005941613
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2701315306184420696}
+  m_GameObject: {fileID: 1189483776128862894}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -131,19 +131,16 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &7452769192146136624
+  m_Constraints: 0
+--- !u!114 &-7623013906400647953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2701315306184420696}
+  m_GameObject: {fileID: 1189483776128862894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ffd127bb3af0f4d8233a0bd7149df6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f877286bffb994408121d6ffa712467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  vertical: 0
-  changeTime: 3
