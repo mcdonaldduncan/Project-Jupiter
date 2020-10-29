@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4739789727358648756, guid: 24aca9e29b6843443a0de743e26bd877, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.076437
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4739789727358648756, guid: 24aca9e29b6843443a0de743e26bd877, type: 3}
       propertyPath: m_LocalRotation.x
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9032101719589876949, guid: 24aca9e29b6843443a0de743e26bd877, type: 3}
       propertyPath: m_Name
-      value: Bot
+      value: Bot Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24aca9e29b6843443a0de743e26bd877, type: 3}
