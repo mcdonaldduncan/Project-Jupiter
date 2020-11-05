@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
 
+    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +25,7 @@ public class Projectile : MonoBehaviour
     
     public void Launch(Vector2 direction, float force)
     {
+        
         rigidbody2d.AddForce(direction * force);
     }
 
